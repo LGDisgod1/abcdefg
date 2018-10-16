@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>欣赏艺术字</title>
+    <style>
+        body{
+		padding:200px;
+        color:lightskyblue;
+        background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539711882418&di=a6d2b178d8c78a94dc9ca2d23d923f1b&imgtype=0&src=http%3A%2F%2Fpic5.photophoto.cn%2F20071103%2F0008020291628390_b.jpg);
+	}
+	span{
+		font-size: 100px;
+		font-family: "KaiTi";
+		position: relative;
+	}
+	span:before,span:after{
+		content:attr(data-q);
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform-origin: left center;
+		transition:all 0.3s linear 0s;
+	}
+	span:before{
+		color:lightpink;
+		z-index: 3;
+		transform:rotateY(15deg);
+	}
+	span:after{
+		color:rgba(0,0,0,0.3);
+		z-index:2;
+		transform: rotateY(0deg) scale(1.1, 1);
+	}
+	span:hover:before{
+		transform:rotateY(40deg) skew(0deg, 3deg);
+	}
+	span:hover:after{
+		transform:rotateY(40deg) skew(0deg,20deg);
+	}
+    </style>
+</head>
+<body>
+        <span data-q="君">君</span>
+        <span data-q="不">不</span>
+        <span data-q="见">见</span>
+        <span data-q="高">高</span>
+        <span data-q="堂">堂</span>
+        <span data-q="明">明</span>
+        <span data-q="镜">镜</span>
+        <span data-q="悲">悲</span>
+        <span data-q="白">白</span>
+        <span data-q="发">发</span>
+</body>
+</html>
